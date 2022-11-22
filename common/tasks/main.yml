@@ -4,6 +4,10 @@
   debug:
     msg: "Hello World!"
 
+- name: Install git python package
+  ansible.builtin.pip:
+    name: gitpython
+ 
 - name: Run Python Script
   command:
     argv:
