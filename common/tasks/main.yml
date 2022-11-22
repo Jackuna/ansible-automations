@@ -1,0 +1,12 @@
+---
+# tasks file for common
+- name: Hello World Sample
+  debug:
+    msg: "Hello World!"
+
+- name: Run Python Script
+  command:
+    argv: 
+      - python3
+      - common/files/main.py
+
