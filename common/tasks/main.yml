@@ -7,7 +7,6 @@
 - name: Install git python package
   ansible.builtin.pip:
     name: gitpython
-  state: absent
   register: git_task
 
 - name: Debug git installation
