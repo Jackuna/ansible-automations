@@ -6,7 +6,11 @@
 
 - name: Run Python Script
   command:
-    argv: 
+    argv:
       - python3
       - common/files/main.py
+  register: output
 
+- name: Debug Python script output
+  debug:
+    var: output.stdout_lines
