@@ -13,7 +13,12 @@
                 "kms:CreateGrant",
                 "kms:ReEncryptFrom"
             ],
-            "Resource": "arn:aws:kms:*:992382676697:key/*"
+            "Resource": "arn:aws:kms:*:992382676697:key/*",
+            "Condition": {
+                "ForAnyValue:StringEquals": {
+                    "kms:ResourceAliases": "alias/aws/ebs"
+                }
+            }
         }
     ]
 }
